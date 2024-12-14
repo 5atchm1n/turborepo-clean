@@ -4,8 +4,10 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "biome": "turbo biome:check",
-    "write": "turbo biome:write"
+    "biome:check": "turbo biome:check",
+    "biome:write": "turbo biome:write",
+    "biome:ci": "turbo biome:ci",
+    "ts": "turbo ts"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

@@ -10,6 +10,8 @@
     "./components/*": ["./src/components/*.tsx", "./src/components/*.ts"]
   },
   "scripts": {
+    "ts": "tsc --noEmit",
+    "biome:ci": "biome ci",
     "biome:check": "biome check",
     "biome:write": "biome check --write"
   },

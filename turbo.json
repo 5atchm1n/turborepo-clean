@@ -7,14 +7,17 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "biome:ci": {
+      "dependsOn": ["^biome:ci"]
+    },
     "biome:check": {
       "dependsOn": ["^biome:check"]
     },
     "biome:write": {
       "dependsOn": ["^biome:write"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "ts": {
+      "dependsOn": ["^ts"]
     },
     "dev": {
       "cache": false,
