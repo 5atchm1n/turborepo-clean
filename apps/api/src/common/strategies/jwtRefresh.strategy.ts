@@ -1,10 +1,6 @@
-import { ExtractJwt, Strategy } from "passport-jwt";
-import { PassportStrategy } from "@nestjs/passport";
 import { Inject, Injectable } from "@nestjs/common";
-import {
-  EnvironmentConfigService,
-  GlobalServiceIdentifiers,
-} from "../../infrastructure";
+import { PassportStrategy } from "@nestjs/passport";
+import { ExtractJwt, Strategy } from "passport-jwt";
 import {
   AuthUseCaseIdentifiers,
   GetUserIfRefreshTokenMatchesUseCase,
@@ -13,6 +9,10 @@ import {
   TokenType,
   UserModel,
 } from "../../core";
+import {
+  EnvironmentConfigService,
+  GlobalServiceIdentifiers,
+} from "../../infrastructure";
 
 @Injectable()
 export class JwtRefreshTokenStrategy extends PassportStrategy(

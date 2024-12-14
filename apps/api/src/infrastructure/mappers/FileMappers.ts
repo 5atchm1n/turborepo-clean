@@ -1,6 +1,6 @@
 import { CreateFileModel, FileModel } from "../../core";
-import { S3FileEntity } from "../repositories";
 import { FileEntity } from "../entities";
+import { S3FileEntity } from "../repositories";
 
 export class FileMappers {
   private constructor() {}

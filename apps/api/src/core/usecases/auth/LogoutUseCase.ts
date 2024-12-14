@@ -1,7 +1,7 @@
-import { IUseCase, TokenType } from "../../domain";
 import { Inject, Injectable } from "@nestjs/common";
 import * as cookie from "cookie";
 import { AppServiceIdentifiers } from "../../../infrastructure";
+import { IUseCase, TokenType } from "../../domain";
 import { IAuthService } from "../../domain/adapters/services/IAuthService";
 
 @Injectable()

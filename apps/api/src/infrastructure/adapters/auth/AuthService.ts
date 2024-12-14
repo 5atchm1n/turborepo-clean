@@ -1,8 +1,8 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { RepositoryIdentifiers } from "../../repositories";
 import { AuthModel, IUserRepository } from "../../../core";
-import { AuthEntity, UserEntity } from "../../entities";
 import { IAuthService } from "../../../core/domain/adapters/services/IAuthService";
+import { AuthEntity, UserEntity } from "../../entities";
+import { RepositoryIdentifiers } from "../../repositories";
 
 @Injectable()
 export class AuthService implements IAuthService {

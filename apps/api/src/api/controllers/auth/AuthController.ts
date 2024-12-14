@@ -15,25 +15,25 @@ import {
   ApiResponse,
   ApiTags,
 } from "@nestjs/swagger";
-import { LoginDto, RegisterDto } from "./models";
-import {
-  IRequest,
-  RegisterUseCase,
-  GetCookieWithJwtRefreshUseCase,
-  GetCookieWithJwtUseCase,
-  GetOneUserByIdUseCase,
-  LogoutUseCase,
-  UserUseCaseIdentifiers,
-  AuthUseCaseIdentifiers,
-} from "../../../core";
+import { Response } from "express";
 import {
   ApiResponseType,
   JwtAuthGuard,
   JwtRefreshGuard,
   LoginGuard,
 } from "../../../common";
-import { Response } from "express";
+import {
+  AuthUseCaseIdentifiers,
+  GetCookieWithJwtRefreshUseCase,
+  GetCookieWithJwtUseCase,
+  GetOneUserByIdUseCase,
+  IRequest,
+  LogoutUseCase,
+  RegisterUseCase,
+  UserUseCaseIdentifiers,
+} from "../../../core";
 import { ApiUser } from "../user/models";
+import { LoginDto, RegisterDto } from "./models";
 
 @Controller("auth")
 @ApiTags("auth")

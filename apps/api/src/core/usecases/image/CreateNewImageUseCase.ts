@@ -1,11 +1,11 @@
+import { Inject } from "@nestjs/common";
+import { AppServiceIdentifiers } from "../../../infrastructure";
 import {
   CreateImageModel,
   IImageService,
-  ImageModel,
   IUseCase,
+  ImageModel,
 } from "../../domain";
-import { Inject } from "@nestjs/common";
-import { AppServiceIdentifiers } from "../../../infrastructure";
 
 export interface ImagePayload {
   name: string;

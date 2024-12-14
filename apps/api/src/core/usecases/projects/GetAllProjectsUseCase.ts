@@ -1,6 +1,6 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { IProjectService, IUseCase, IUserService } from "../../domain";
 import { AppServiceIdentifiers } from "../../../infrastructure";
+import { IProjectService, IUseCase, IUserService } from "../../domain";
 import { ProjectData } from "./models";
 
 @Injectable()

@@ -6,12 +6,12 @@ import {
   UploadedFile,
   UseInterceptors,
 } from "@nestjs/common";
+import { FileInterceptor } from "@nestjs/platform-express";
 import {
-  ImageUseCaseIdentifiers,
   CreateNewImageUseCase,
   ImagePayload,
+  ImageUseCaseIdentifiers,
 } from "../../../core/usecases/image";
-import { FileInterceptor } from "@nestjs/platform-express";
 import { ApiImage } from "./model";
 
 export class FileDto {

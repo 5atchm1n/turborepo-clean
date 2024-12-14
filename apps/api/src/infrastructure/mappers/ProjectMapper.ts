@@ -1,5 +1,5 @@
-import { ProjectEntity } from "../entities";
 import { CreateProjectData, ImageModel, ProjectModel } from "../../core";
+import { ProjectEntity } from "../entities";
 
 export class ProjectMapper {
   private constructor() {}

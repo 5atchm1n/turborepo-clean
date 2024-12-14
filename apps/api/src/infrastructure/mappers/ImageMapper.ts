@@ -1,5 +1,5 @@
-import { ImageEntity } from "../entities";
 import { CreateImageModel, FileModel, ImageModel } from "../../core";
+import { ImageEntity } from "../entities";
 
 export class ImageMapper {
   private constructor() {}

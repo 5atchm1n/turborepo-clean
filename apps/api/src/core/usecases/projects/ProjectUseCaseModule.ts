@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { InfrastructureModules } from "../../../infrastructure";
-import { ProjectUseCaseIdentifiers } from "./ProjectUseCaseIdentifiers";
 import { CreateNewProjectUseCase } from "./CreateNewProjectUseCase";
 import { GetAllProjectsUseCase } from "./GetAllProjectsUseCase";
+import { ProjectUseCaseIdentifiers } from "./ProjectUseCaseIdentifiers";
 
 @Module({
   imports: [InfrastructureModules],

@@ -1,4 +1,3 @@
-import { IConfigService, IExceptions, IFileRepository } from "../../../core";
 import {
   DeleteObjectCommand,
   PutObjectCommand,
@@ -6,9 +5,10 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3";
 import { HttpStatus, Inject, Injectable } from "@nestjs/common";
-import { GlobalServiceIdentifiers } from "../../global";
-import slugify from "slugify";
 import * as mime from "mime";
+import slugify from "slugify";
+import { IConfigService, IExceptions, IFileRepository } from "../../../core";
+import { GlobalServiceIdentifiers } from "../../global";
 
 export interface S3FileEntity {
   name: string;

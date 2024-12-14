@@ -1,5 +1,5 @@
-import { IExceptions } from "../../../domain";
 import { HttpStatus } from "@nestjs/common";
+import { IExceptions } from "../../../domain";
 
 export class ForbiddenException extends IExceptions {
   constructor(message: string) {

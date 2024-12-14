@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
 import { InfrastructureModules } from "../../infrastructure";
-import { ProjectUseCaseModule } from "./projects";
-import { UserUseCaseModule } from "./user";
 import { AuthUseCaseModule } from "./auth";
 import { ImageUseCaseModule } from "./image";
+import { ProjectUseCaseModule } from "./projects";
+import { UserUseCaseModule } from "./user";
 
 @Module({
   imports: [

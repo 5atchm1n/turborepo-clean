@@ -7,13 +7,13 @@ import {
   Res,
 } from "@nestjs/common";
 import { ApiExtraModels, ApiResponse, ApiTags } from "@nestjs/swagger";
-import { ApiUser, SubscribeNewsletterDto } from "./models";
+import { Response } from "express";
+import { ApiResponseType } from "../../../common";
 import {
   SubscribeNewsletterUsecase,
   UserUseCaseIdentifiers,
 } from "../../../core";
-import { Response } from "express";
-import { ApiResponseType } from "../../../common";
+import { ApiUser, SubscribeNewsletterDto } from "./models";
 
 @ApiTags("user")
 @ApiExtraModels(ApiUser)

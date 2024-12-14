@@ -1,11 +1,11 @@
 import { Injectable } from "@nestjs/common";
 import { IProjectRepository } from "../../../core";
 import { PrismaService } from "../../adapters";
-import {
-  ProjectNotFoundException,
-  ProjectCreateFailedException,
-} from "./exceptions";
 import { ProjectEntity } from "../../entities";
+import {
+  ProjectCreateFailedException,
+  ProjectNotFoundException,
+} from "./exceptions";
 
 @Injectable()
 export class ProjectRepository implements IProjectRepository<ProjectEntity> {

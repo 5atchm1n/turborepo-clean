@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { ProjectRepositoryModule } from "../../repositories";
-import { ProjectService } from "./ProjectService";
 import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
 import { ImageServiceModule } from "../image";
+import { ProjectService } from "./ProjectService";
 
 @Module({
   imports: [ProjectRepositoryModule, ImageServiceModule],

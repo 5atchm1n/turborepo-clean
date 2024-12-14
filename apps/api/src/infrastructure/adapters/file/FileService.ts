@@ -1,5 +1,4 @@
 import { Inject } from "@nestjs/common";
-import { RepositoryIdentifiers, S3FileEntity } from "../../repositories";
 import {
   CreateFileModel,
   FileModel,
@@ -9,6 +8,7 @@ import {
 } from "../../../core";
 import { FileEntity } from "../../entities";
 import { FileMappers } from "../../mappers";
+import { RepositoryIdentifiers, S3FileEntity } from "../../repositories";
 
 export class FileService implements IFileService {
   constructor(

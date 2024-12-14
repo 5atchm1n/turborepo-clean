@@ -1,11 +1,11 @@
 import { Inject, Injectable } from "@nestjs/common";
+import { AppServiceIdentifiers } from "../../../infrastructure";
 import {
   IUseCase,
   IUserService,
-  UserModel,
   NewsletterSubscribeModel,
+  UserModel,
 } from "../../domain";
-import { AppServiceIdentifiers } from "../../../infrastructure";
 
 @Injectable()
 export class SubscribeNewsletterUsecase

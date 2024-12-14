@@ -1,14 +1,14 @@
-import {
-  IUseCase,
-  ILoggerService,
-  IHashService,
-  AuthModel,
-} from "../../domain";
+import { Inject, Injectable } from "@nestjs/common";
 import {
   AppServiceIdentifiers,
   GlobalServiceIdentifiers,
 } from "../../../infrastructure";
-import { Inject, Injectable } from "@nestjs/common";
+import {
+  AuthModel,
+  IHashService,
+  ILoggerService,
+  IUseCase,
+} from "../../domain";
 import { IAuthService } from "../../domain/adapters/services/IAuthService";
 
 interface RegisterUser {

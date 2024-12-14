@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
-import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
-import { FileService } from "./FileService";
 import {
   FileRepositoryModule,
   S3FileRepositoryModule,
 } from "../../repositories";
+import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
+import { FileService } from "./FileService";
 
 @Module({
   imports: [FileRepositoryModule, S3FileRepositoryModule],

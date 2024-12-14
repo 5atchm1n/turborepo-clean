@@ -1,7 +1,7 @@
+import { Injectable } from "@nestjs/common";
 import { IDBFileRepository } from "../../../core";
 import { PrismaService } from "../../adapters";
 import { FileEntity } from "../../entities";
-import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class FileRepository implements IDBFileRepository<FileEntity> {

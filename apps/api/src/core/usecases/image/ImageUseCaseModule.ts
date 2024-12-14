@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { InfrastructureModules } from "../../../infrastructure";
-import { ImageUseCaseIdentifiers } from "./ImageUseCaseIdentifiers";
 import { CreateNewImageUseCase } from "./CreateNewImageUseCase";
+import { ImageUseCaseIdentifiers } from "./ImageUseCaseIdentifiers";
 
 @Module({
   imports: [InfrastructureModules],

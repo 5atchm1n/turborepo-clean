@@ -1,5 +1,5 @@
-import { ImageModel } from "../../../../core";
 import { ApiProperty } from "@nestjs/swagger";
+import { ImageModel } from "../../../../core";
 
 export class ApiImage {
   constructor(image: ImageModel) {

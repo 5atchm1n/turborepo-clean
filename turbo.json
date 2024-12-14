@@ -3,9 +3,9 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["prisma:generate", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "biome:ci": {
       "dependsOn": ["^biome:ci"]
@@ -17,7 +17,7 @@
       "dependsOn": ["^biome:write"]
     },
     "ts": {
-      "dependsOn": ["^ts"]
+      "dependsOn": ["prisma:generate", "^ts"]
     },
     "prisma:generate": {
       "dependsOn": ["^prisma:generate"],

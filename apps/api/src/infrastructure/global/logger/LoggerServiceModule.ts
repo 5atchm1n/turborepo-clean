@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { LoggerService } from "./LoggerService";
 import { GlobalServiceIdentifiers } from "../GlobalServiceIdentifiers";
+import { LoggerService } from "./LoggerService";
 
 @Module({
   providers: [

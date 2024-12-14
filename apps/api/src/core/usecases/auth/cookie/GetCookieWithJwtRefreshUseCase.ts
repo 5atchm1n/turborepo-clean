@@ -1,5 +1,5 @@
-import { TokenType, UserModel } from "../../../domain";
 import { Injectable } from "@nestjs/common";
+import { TokenType, UserModel } from "../../../domain";
 import { GetCookieWithJwtBaseUseCase } from "./GetCookieWithJwtBaseUseCase";
 
 interface GetCookieWithJwtRefreshCommands {

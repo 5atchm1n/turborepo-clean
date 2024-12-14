@@ -1,6 +1,6 @@
-import { IUserService, IUseCase, UserModel } from "../../domain";
-import { AppServiceIdentifiers } from "../../../infrastructure";
 import { Inject, Injectable } from "@nestjs/common";
+import { AppServiceIdentifiers } from "../../../infrastructure";
+import { IUseCase, IUserService, UserModel } from "../../domain";
 
 interface GetOneUserByIdCommands {
   id: string;

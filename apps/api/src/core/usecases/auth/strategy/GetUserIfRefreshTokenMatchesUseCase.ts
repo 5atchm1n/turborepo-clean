@@ -1,8 +1,8 @@
-import { IHashService, IUseCase, UserModel } from "../../../domain";
-import { AppServiceIdentifiers } from "../../../../infrastructure";
 import { Inject, Injectable } from "@nestjs/common";
-import { ForbiddenException } from "../exceptions";
+import { AppServiceIdentifiers } from "../../../../infrastructure";
+import { IHashService, IUseCase, UserModel } from "../../../domain";
 import { IAuthService } from "../../../domain/adapters/services/IAuthService";
+import { ForbiddenException } from "../exceptions";
 
 interface GetUserIfRefreshTokenMatchesCommands {
   userId: string;

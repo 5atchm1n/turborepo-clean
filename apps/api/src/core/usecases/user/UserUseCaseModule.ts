@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
 import { InfrastructureModules } from "../../../infrastructure";
-import { GetOneUserByIdUseCase } from "./GetOneUserByIdUseCase";
-import { UserUseCaseIdentifiers } from "./UserUseCaseIdentifiers";
 import { RegisterUseCase } from "../auth";
+import { GetOneUserByIdUseCase } from "./GetOneUserByIdUseCase";
 import { SubscribeNewsletterUsecase } from "./SubscribeNewsletterUsecase";
+import { UserUseCaseIdentifiers } from "./UserUseCaseIdentifiers";
 
 @Module({
   imports: [InfrastructureModules],

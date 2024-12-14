@@ -1,5 +1,5 @@
-import { IService } from "../../interfaces/IService";
 import { AuthEntity } from "../../../../infrastructure";
+import { IService } from "../../interfaces/IService";
 import { AuthModel } from "../../models";
 
 export interface IAuthService extends IService<AuthModel, AuthEntity> {

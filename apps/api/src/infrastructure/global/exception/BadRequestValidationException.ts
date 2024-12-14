@@ -1,6 +1,6 @@
-import { IExceptions } from "../../../core";
-import { ValidationError } from "class-validator";
 import { HttpStatus } from "@nestjs/common";
+import { ValidationError } from "class-validator";
+import { IExceptions } from "../../../core";
 
 export class BadRequestValidationException extends IExceptions {
   constructor(errors: ValidationError[]) {

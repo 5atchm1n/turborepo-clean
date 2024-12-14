@@ -1,4 +1,9 @@
 import { Inject, Injectable } from "@nestjs/common";
+import * as cookie from "cookie";
+import {
+  AppServiceIdentifiers,
+  GlobalServiceIdentifiers,
+} from "../../../../infrastructure";
 import {
   IConfigService,
   IHashService,
@@ -9,11 +14,6 @@ import {
   TokenType,
   UserModel,
 } from "../../../domain";
-import {
-  AppServiceIdentifiers,
-  GlobalServiceIdentifiers,
-} from "../../../../infrastructure";
-import * as cookie from "cookie";
 import { IAuthService } from "../../../domain/adapters/services/IAuthService";
 
 interface GetCookieCommands {

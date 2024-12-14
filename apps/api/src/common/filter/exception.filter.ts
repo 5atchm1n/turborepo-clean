@@ -5,9 +5,9 @@ import {
   HttpException,
   HttpStatus,
 } from "@nestjs/common";
-import { LoggerService } from "../../infrastructure";
 import { Request, Response } from "express";
 import { IExceptions } from "../../core";
+import { LoggerService } from "../../infrastructure";
 
 interface ErrorResponse {
   status: HttpStatus;

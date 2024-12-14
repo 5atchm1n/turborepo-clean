@@ -1,4 +1,7 @@
 import { Module } from "@nestjs/common";
+import { InfrastructureModules } from "../../../infrastructure";
+import { AuthUseCaseIdentifiers } from "./AuthUseCaseIdentifiers";
+import { LogoutUseCase } from "./LogoutUseCase";
 import {
   GetCookieWithJwtRefreshUseCase,
   GetCookieWithJwtUseCase,
@@ -8,9 +11,6 @@ import {
   ValidateUserForJwtStrategyUseCase,
   ValidateUserForLocalStrategyUseCase,
 } from "./strategy";
-import { LogoutUseCase } from "./LogoutUseCase";
-import { InfrastructureModules } from "../../../infrastructure";
-import { AuthUseCaseIdentifiers } from "./AuthUseCaseIdentifiers";
 
 @Module({
   imports: [InfrastructureModules],

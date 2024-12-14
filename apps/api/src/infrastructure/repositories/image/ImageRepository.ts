@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaService } from "../../adapters";
-import { ImageNotFoundError, ImageCreationFailedError } from "./exceptions";
-import { ImageEntity } from "../../entities";
 import { IImageRepository } from "../../../core";
+import { PrismaService } from "../../adapters";
+import { ImageEntity } from "../../entities";
+import { ImageCreationFailedError, ImageNotFoundError } from "./exceptions";
 
 @Injectable()
 export class ImageRepository implements IImageRepository<ImageEntity> {

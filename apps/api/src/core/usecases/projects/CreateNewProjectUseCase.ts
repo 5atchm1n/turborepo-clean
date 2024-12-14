@@ -1,11 +1,11 @@
 import { Inject, Injectable } from "@nestjs/common";
+import { AppServiceIdentifiers } from "../../../infrastructure";
 import {
   IProjectService,
   IUseCase,
   IUserService,
   ProjectModel,
 } from "../../domain";
-import { AppServiceIdentifiers } from "../../../infrastructure";
 import { CreateProjectData } from "./CreateProjectData";
 import { ProjectData } from "./models";
 

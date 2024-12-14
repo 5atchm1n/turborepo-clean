@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { JwtModule } from "@nestjs/jwt";
-import { JsonWebTokenService } from "./JsonWebTokenService";
 import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
+import { JsonWebTokenService } from "./JsonWebTokenService";
 
 @Module({
   imports: [

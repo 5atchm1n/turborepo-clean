@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { IUserRepository } from "../../../core";
-import { UserEntity } from "../../entities";
-import { PrismaService } from "../../adapters";
 import { User } from "@prisma/client";
+import { IUserRepository } from "../../../core";
+import { PrismaService } from "../../adapters";
+import { UserEntity } from "../../entities";
 import { UserCreateFailedException, UserNotFoundException } from "./exceptions";
 
 @Injectable()

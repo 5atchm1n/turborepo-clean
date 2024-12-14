@@ -1,5 +1,4 @@
 import { Inject, Injectable } from "@nestjs/common";
-import { RepositoryIdentifiers } from "../../repositories";
 import {
   CreateImageModel,
   FileModel,
@@ -9,8 +8,9 @@ import {
   ImageModel,
 } from "../../../core";
 import { ImageEntity } from "../../entities";
-import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
 import { ImageMapper } from "../../mappers";
+import { RepositoryIdentifiers } from "../../repositories";
+import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
 
 @Injectable()
 export class ImageService implements IImageService {

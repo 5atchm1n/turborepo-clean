@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
-import { BcryptServiceModule } from "./bcrypt";
-import { JsonWebTokenServiceModule } from "./jwt";
-import { UserServiceModule } from "./user";
-import { ProjectServiceModule } from "./project";
-import { ImageServiceModule } from "./image";
 import { AuthServiceModule } from "./auth";
+import { BcryptServiceModule } from "./bcrypt";
+import { ImageServiceModule } from "./image";
+import { JsonWebTokenServiceModule } from "./jwt";
+import { ProjectServiceModule } from "./project";
+import { UserServiceModule } from "./user";
 
 @Module({
   imports: [

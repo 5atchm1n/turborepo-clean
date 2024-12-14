@@ -1,7 +1,7 @@
-import { ProjectData } from "../../../../core";
 import { ApiProperty } from "@nestjs/swagger";
-import { ApiUser } from "../../user/models";
+import { ProjectData } from "../../../../core";
 import { ApiImage } from "../../image/model";
+import { ApiUser } from "../../user/models";
 
 export class ApiProject {
   constructor(data: ProjectData) {

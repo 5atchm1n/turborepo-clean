@@ -10,7 +10,14 @@ import {
   UseGuards,
   UseInterceptors,
 } from "@nestjs/common";
+import { AnyFilesInterceptor } from "@nestjs/platform-express";
 import { ApiExtraModels, ApiResponse, ApiTags } from "@nestjs/swagger";
+import { Response } from "express";
+import {
+  ApiResponseType,
+  JwtAuthGuard,
+  ParseJsonArrayPipe,
+} from "../../../common";
 import {
   CreateNewProjectUseCase,
   CreateProjectData,
@@ -18,15 +25,8 @@ import {
   IRequest,
   ProjectUseCaseIdentifiers,
 } from "../../../core";
-import { Response } from "express";
-import {
-  ApiResponseType,
-  JwtAuthGuard,
-  ParseJsonArrayPipe,
-} from "../../../common";
-import { ApiProject, CreateImageDto, CreateProjectDto } from "./models";
-import { AnyFilesInterceptor } from "@nestjs/platform-express";
 import { BadRequestException } from "../../../infrastructure";
+import { ApiProject, CreateImageDto, CreateProjectDto } from "./models";
 
 @ApiTags("project")
 @ApiExtraModels(ApiProject)

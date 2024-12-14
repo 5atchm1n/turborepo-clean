@@ -7,9 +7,9 @@ import {
   ProjectModel,
 } from "../../../core";
 import { ProjectEntity } from "../../entities";
+import { ProjectMapper } from "../../mappers";
 import { RepositoryIdentifiers } from "../../repositories";
 import { AppServiceIdentifiers } from "../AppServiceIdentifiers";
-import { ProjectMapper } from "../../mappers";
 
 @Injectable()
 export class ProjectService implements IProjectService {

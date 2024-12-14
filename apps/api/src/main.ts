@@ -1,8 +1,8 @@
+import { Server } from "node:net";
 import { INestApplication } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
-import { Server } from "node:net";
-import { setupSwagger, setupNestApplication } from "./common/config";
+import { setupNestApplication, setupSwagger } from "./common/config";
 
 async function bootstrap(): Promise<void> {
   const env = process.env.NODE_ENV;

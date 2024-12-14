@@ -1,6 +1,6 @@
+import { UserEntity } from "../../../../infrastructure";
 import { IService } from "../../interfaces/IService";
 import { NewsletterSubscribeModel, UserModel } from "../../models";
-import { UserEntity } from "../../../../infrastructure";
 
 export interface IUserService extends IService<UserModel, UserEntity> {
   subscribeNewsletter(model: NewsletterSubscribeModel): Promise<UserModel>;

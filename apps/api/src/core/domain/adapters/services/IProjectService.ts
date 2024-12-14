@@ -1,5 +1,5 @@
-import { ProjectModel } from "../../models";
 import { CreateProjectData } from "../../../usecases";
+import { ProjectModel } from "../../models";
 
 export interface IProjectService {
   createProject(project: CreateProjectData): Promise<ProjectModel>;

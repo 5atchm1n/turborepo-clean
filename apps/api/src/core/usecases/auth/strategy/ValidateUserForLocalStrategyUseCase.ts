@@ -1,13 +1,13 @@
+import { Inject, Injectable } from "@nestjs/common";
+import { AppServiceIdentifiers } from "../../../../infrastructure";
 import {
   IHashService,
   IUseCase,
-  UserModel,
   IUserService,
+  UserModel,
 } from "../../../domain";
-import { AppServiceIdentifiers } from "../../../../infrastructure";
-import { Inject, Injectable } from "@nestjs/common";
-import { ForbiddenException } from "../exceptions";
 import { IAuthService } from "../../../domain/adapters/services/IAuthService";
+import { ForbiddenException } from "../exceptions";
 
 interface ValidateUserForLocalStrategyCommands {
   email: string;

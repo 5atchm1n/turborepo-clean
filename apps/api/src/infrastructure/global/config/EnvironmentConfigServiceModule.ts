@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
+import { GlobalServiceIdentifiers } from "../GlobalServiceIdentifiers";
 import { EnvironmentConfigService } from "./EnvironmentConfigService";
 import { validate } from "./EnvironmentConfigValidation";
-import { GlobalServiceIdentifiers } from "../GlobalServiceIdentifiers";
 
 @Module({
   imports: [
