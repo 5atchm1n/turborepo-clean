@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  first_name    String?
+  last_name     String?
+  password      String
+  last_login    DateTime?
+  refresh_token String?
+  newsletter    Boolean   @default(false)
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  projects      Project[] @relation("UserProjects")
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  user_id     String
+  creator     User     @relation(fields: [user_id], references: [id], name: "UserProjects")
+  images      Image[]  @relation("ImagesProjects")
+}
+
+model Image {
+  id          String    @id @default(uuid())
+  name        String
+  description String
+  projects    Project[] @relation("ImagesProjects")
+  file_id     String    @unique @default(uuid())
+  file        File      @relation(fields: [file_id], references: [id], name: "ImageFile")
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+}
+
+model File {
+  id         String   @id @default(uuid())
+  url        String
+  metadata   String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  images     Image[]  @relation("ImageFile")
+}

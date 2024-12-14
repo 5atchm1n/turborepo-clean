@@ -19,7 +19,12 @@
     "ts": {
       "dependsOn": ["^ts"]
     },
+    "prisma:generate": {
+      "dependsOn": ["^prisma:generate"],
+      "cache": false
+    },
     "dev": {
+      "dependsOn": ["prisma:generate"],
       "cache": false,
       "persistent": true
     }

@@ -1,0 +1,18 @@
+{
+  "extends": ["@repo/biome-config/biome"],
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useImportType": "off"
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": false
+  }
+}
