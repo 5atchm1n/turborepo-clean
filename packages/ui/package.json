@@ -1,29 +1,31 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./globals.css": "./src/css/globals.css",
+    "./postcss.config": "./src/config/postcss.config.mjs",
+    "./tailwind.config": "./src/config/tailwind.config.ts",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": ["./src/components/*.tsx", "./src/components/*.ts"]
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "ts": "tsc --noEmit",
+    "biome:ci": "biome ci",
+    "biome:check": "biome check",
+    "biome:write": "biome check --write"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
+    "@repo/biome-config": "*",
     "@repo/typescript-config": "*",
-    "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
-    "@types/react": "18.3.0",
-    "@types/react-dom": "18.3.1",
-    "typescript": "5.5.4"
+    "tailwindcss": "^3.4.16"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@radix-ui/react-slot": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
